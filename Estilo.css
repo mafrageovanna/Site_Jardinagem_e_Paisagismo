@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,500;0,600;1,500&family=Playfair+Display:wght@400;500;600&display=swap');/*importa recursos externos para o css*/
+
+*{
+margin:0;/*Define o espaço externo de um elemento*/
+padding:0;/*Define o espaço interno de um elento(entre o conteúdo e a borda)*/
+box-sizing:border-box;/*Faz com que o tamnho definido para um elemento já considere o conteúdo + padding + borda,facilitando o controle dos tamanhos*/
+}
+body{
+background-color: #FBF9F3;/*Define a *cor de fundo* de um elemento.*/
+font-family: Besley, serif;/*Define a fonte(o tipo de letra) usada no texto*/
+color: #2E4600;/*Define a cor do texto*/
+}
+header{
+background-color:#2E4600;
+display: flex;/*Display: Define como os elementos serão organizados/exibidos; 
+Flex: Organiza os elementos de forma flexível, geralmente em linha ou coluna*/
+align-items: center;/*Define como os elementos ficam alinhados no sentido contrário ao principal dentro do flexbox*/
+justify-content: space-between;/*justify-content: Define como os elementos são distribuídos no espaço disponível; Space-between: Coloca u elemento de um lado e outro do outro lado,distribuindo o espaço entre eles*/
+padding: 20px 50px;
+}
+.logo{
+display: flex;
+align-items: center;
+}
+.logo img{
+width: 50px;/*Define a largura de um elemento*/
+margin-right: 15px;
+}
+.logo h1{
+color: #FFFFFF;/*Define a cor do texto*/
+font-size: 24px;/*Define o tamanho da letra*/
+}
+#menu ul{
+display: flex;
+list-style: none;/*Define o estilo dos marcadores de uma lista*/
+gap: 25px;/*Define o espaço entre os elementos dentro dee um flexbox ou grid*/
+}
+#menu a{
+color: #FFFFFF;
+text-decoration: none;/*Define a decoração do texto,como sublinhado(ex:none=tira o sublinhado)*/
+font-size: 28px;
+}
+#menu a:hover{/*:hover: É usado para mudar a aparência de um elemento quando o mouse passar por cima dele*/
+color: #A2C523;
+}
+#banner{
+background-image: url("Imagens/paissagem\ de\ fundo.jpg");
+background-size: cover;
+background-position: center bottom;
+padding: 100px 50px;
+text-align: center;/*Define o alinhamento do texto*/
+border-bottom: 5px solid #FEFAC1;
+}
+#banner h2{
+color: #FFFFFF;
+font-size: 32px;
+margin-bottom: 20px;/*DEfine o espaço externo EMBAIXO do elemento*/
+}
+#banner p{
+color: #FFFFFF;
+font-size: 18px;
+}
+#sobre{
+background-color: #FBF9F3;
+display: flex;
+align-items: center;
+gap: 50px;
+padding: 70px 50px;
+border-bottom: 5px solid #FEFAC1;
+}
+#sobre img{
+width: 45%;
+border-radius:10px;
+}
+#sobre div{
+width: 55%;
+}
+#sobre h2{
+color: #2E4600;
+font-size: 32px;
+margin-bottom: 20px;
+}
+#sobre p{
+font-size: 18px;
+line-height: 1.6;/*Define o espaçamento entre as linhas de texto*/
+}
+#servicos{
+background-color: #EAF3DE;
+padding: 70px 50px;/*Cria espaço interno.São 70px em cima e embaixo e 50px nas laterais.Isso evita que o conteúdo fique grudado nas bordas*/
+border-bottom: 5px solid #FEFAC1;
+}
+#servicos h2{
+font-family: 'Playfair Display',serif;
+color: #2E4600;
+text-align: center;
+font-size: 32px;
+margin-bottom: 40px;/*Deixa um espaço de 40px entre o título e os elementos*/
+}
+.servicos{
+display: grid;/*Organiza os elementos em linha e colunas(tranforma ".serviços" em uma grade)*/
+grid-template-columns: repeat(4, 1fr);/*define quantas colunas a grade terá(cria 4 colunas iguais)*/
+gap: 25px;
+}
+.servicos > div{/*>div: Seleciona os div que estão diretamene dentro de .serviços*/
+background-color:#FBF9F3;
+padding: 20px;
+text-align: center;
+border-radius: 10px;
+}
+.servicos img{
+width: 100%;
+height:200px;/*Define uma altura para o elemento*/
+object-fit: contain;/*object-fit: coloca uma imagem dentro de um espaço definido em que podemos controlar o tamanho;contain: Redimensiona a imagem mantendo a proporção original para que ela caiba inteira dentro do contêiner, sem cortes e sem distorção*/
+}
+.servicos p{
+font-family: 'Besley',serif;
+color: #2E4600;
+font-size: 18px;
+margin-top: 15px;/*Coloca espaço enre a imagem e o texto(já que a imagem ficará acima)*/
+}
+#projetos{
+background-color: #FBF9F3;
+padding: 70px 50px;
+}
+#projetos h2{
+font-family: 'Playfair Display', serif;
+color: #2E4600;
+text-align: center;
+font-size: 32px;
+margin-bottom: 40px;
+}
+.projetos{
+display: flex;
+gap: 25px;
+}
+.projetos > div{
+width: 30%;
+text-align: center;
+}
+.projetos img{
+width: 100%;
+height: 250px;
+object-fit: cover;/*Faz a imagem preencher esse espaço sem ficar deformada*/
+border-radius:10px;
+}
+.projetos p{
+font-family: 'Besley', serif;
+color: #2E4600;
+font-size: 18px;
+margin-top: 15px;
+}
+#depoimento p:first-child{/*frist-child: Seleciona o primeiro elemento filho dentro de outro elemento*/
+font-family: 'Besley', serif;
+text-align: center;
+font-size: 18px;
+font-style: italic;/*Deine o estilo da letra,como normal ou italic*/
+margin-bottom: 20px;
+}
+#depoimento p:last-child{/*Seleciona o último elemento filho dentro de outro elemento.Serve para aplicar estilos específicos ao último elemento*/
+text-align: center;
+font-size: 16px;
+font-weight: 600;
+margin-bottom: 40px;
+}
+#cta{
+background-color: #2E4600;
+padding: 70px 50px;
+text-align: center;
+}
+#cta h2{
+color: #EAF3DE;
+font-family: 'Playfair Display', serif;
+font-size: 32px;
+margin-bottom: 40px;
+}
+#cta a{
+background-color: #A2C523;
+color: #1F3200;
+font-family: 'Besley',serif;
+text-decoration: none;
+padding: 15px 30px;/*Cria espaço interno.São 15px em cima e embaixo e 30px nas laterais.Isso evita que o conteúdo fique grudado nas bordas*/
+font-size: 18px;
+border-radius:30px;
+}
+#cta a:hover{
+background-color: #1F3200 ;
+color: #A2C523;
+}
+footer{
+background-color: #1F3200;
+color: #FFFFFF;
+padding: 40px 50px;
+}
+.empresa{
+font-family: 'Besley',serif;
+font-size: 16px;
+margin-bottom: 20px;/*Define o espaço externo EMBAIXO do elemento*/
+}
+.footer-menu ul{
+display: flex;
+gap: 20px;
+margin-top: 20px;
+margin-bottom: 20px;
+list-style: none;/*Define o estilo dos marcadores de uma lista*/
+}
+.footer-menu a{
+font-family: 'Besley',serif;
+color: #EAF3DE; 
+text-decoration: none;/*Define a decoração do texto,como sublinhado(ex:none=tira o sublinhado)*/
+}
+.footer-menu a:hover{
+color: #A2C523;
+}
+.footer-contato{
+font-family: 'Besley',serif;
+color: #EAF3DE;
+display: inline;
+margin-right: 15px;/*Espaço entre os textos*/
+}
+.redes-sociais{
+display: flex;
+text-align: right;
+gap: 15px;
+margin-top: 20px;
+}
+.redes-sociais img{
+width: 35px;
+height: 35px;
+object-fit: contain;
+}
+#banner-contato{
+background-image: url("Imagens/Banner\ de\ contato.jpg");
+background-size: cover;
+background-position: center;
+padding: 50px 25px;
+text-align: center;
+border-bottom: 5px solid #FEFAC1;
+}
+#banner-contato h2{
+font-family: 'Playfair Display', serif;
+color: #A2C523;
+font-size: 32px;
+margin-bottom: 20px;
+}
+#banner-contato p{
+color: #A2C523;
+font-size: 18px;
+margin-bottom: 20px;
+}
+#contato{
+background-color:#FBF9F3;
+padding: 70px 50px;/*70px espaço interno na vertical:em cima e embaixo.50px espaço interno na horizontal:à esquerda e à direita*/
+text-align: center;
+}
+#contato div{
+background-color: #EAF3DE;
+padding: 25px;
+margin-top: 30px;
+border-radius: 10px;
+box-shadow: 0px 5px 5px #A2C523;/*0px deslocamento horizontal;3px deslocamento vertical;5px desfoque;#A2C523 define a cor*/
+}
+#contato p{
+font-size: 18px;
+margin-bottom: 20px;
+}
+#contato h3{
+font-family: 'Playfair Display', serif;
+color: #2E4600;
+font-size: 24px;
+margin-bottom: 15px;
+}
+#banner-servico{
+background-image: url("Imagens/Banner\ de\ serviço.jpg");
+background-size: cover;
+background-position: center;
+padding: 50px 25px;
+text-align: center;/*Define o alinhamento do texto*/
+border-bottom: 5px solid #FEFAC1;
+}
+#banner-servico h2{
+font-family: 'Playfair Display', serif;
+color: #FFFFFF;
+font-size: 32px;
+margin-bottom: 20px;
+text-align: center;
+}
+#banner-servico p{
+color: #FFFFFF;
+margin-bottom: 40px;
+text-align: center;
+}
+#pagina-servico{
+background-color: #FBF9F3;
+padding: 70px 50px;
+text-align: center;
+}
+#pagina-servico > p{
+font-size: 18px;
+margin-bottom: 40px;
+}
+.lista-servico{
+display: grid;
+grid-template-columns: repeat(2, 1fr);/*repeat(2, ...): indica que queremos repetir a mesma configuração duas vezes, ou seja, criar 2 colunas; 1fr: significa uma fração do espaço disponível. Como as duas colunas usam 1fr, elas dividem o espaço igualmente*/
+gap: 30px;
+}
+.lista-servico div{
+background-color: #EAF3DE;
+padding: 25px;
+border-radius: 10px;
+text-align: center;
+border: 5px solid #A2C523;
+}
+.lista-servico img{
+width: 100%;
+height: 250px;
+object-fit: cover;
+object-fit: contain;
+}
+.lista-servico h3{
+font-family: 'Playfair Display', serif;
+color: #2E4600;
+font-size: 24px;
+margin-top: 20px;
+margin-bottom: 15px;
+}
